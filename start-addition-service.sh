@@ -1,4 +1,8 @@
 #!/bin/bash
+cd '/home/ec2-user/apps/addition-service'
+echo 'EC2 list before copying content from S3 to EC2 = '
+ls
+
 echo 'S3 list = '
 aws s3 ls s3://pract-code-deploy
 
@@ -10,4 +14,4 @@ cd '/home/ec2-user/apps/addition-service'
 echo 'EC2 list = '
 ls
 echo 'Starting Spring Boot app'
-nohup java -jar addition-service-1.0.0.jar > /dev/null &
+nohup java -jar hello-word-jar-type-1.0.0.jar > /dev/null &
