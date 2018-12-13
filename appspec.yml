@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: target/hello-word-jar-type-1.0.0.jar
+  - source: ./
     destination: /home/ec2-user/apps/addition-service
 hooks:
   AfterInstall:
