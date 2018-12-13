@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+files:
+  - source: ./
+    destination: /home/ec2-user/apps/addition-service
+hooks:
+  AfterInstall:
+    - location: change-file-permission.sh
+      runas: root
+  ApplicationStart:
+    - location: start-addition-service.sh
+      runas: root
