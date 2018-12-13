@@ -2,7 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: ./
-    destination: /home/ec2-user/apps/hello-word
+    destination: change-file-permission.sh
+  - source: ./
+    destination: start-addition-service.sh
 hooks:
   AfterInstall:
     - location: change-file-permission.sh
