@@ -3,14 +3,20 @@ cd '/home/ec2-user/apps/hello-word'
 echo 'EC2 list before copying content from S3 to EC2 = '
 ls
 
-echo 'S3 list = '
-aws s3 ls s3://pract-code-build/hello-word-jar-type/target
+aws s3 ls s3://pract-code-build/hello-word-jar-type/
 
 echo 'Starting copying jar from S3 bucket to EC2'
-aws s3 cp s3://pract-code-build/hello-word-jar-type/target/hello-word-jar-type-1.0.0.jar hello-word-jar-type-1.0.0.jar
+aws s3 cp s3://pract-code-build/hello-word-jar-type/hello-word-jar-type hello-word-jar-type.zip
 echo 'Jar copy completed from S3 bucket to EC2'
 
-echo 'EC2 list After copying content from S3 to EC2 = '
+echo 'Unzipping copied file'
+unzip hello-word-jar-type.zip
+
+echo 'Unzipping completed'
+cd target
+
+echo 'List of files'
+pwd
 ls
 
 echo 'Starting Spring Boot app'
