@@ -6,7 +6,7 @@ ls
 aws s3 ls s3://pract-code-build/hello-word-jar-type/
 
 echo 'Starting copying jar from S3 bucket to EC2'
-aws s3 cp s3://pract-code-build/hello-word-jar-type/hello-word-jar-type hello-word-jar-type.zip
+aws s3 cp s3://pract-code-build/hello-word-jar-type/hello-word-jar-type.zip hello-word-jar-type.zip
 echo 'Jar copy completed from S3 bucket to EC2'
 
 echo 'Unzipping copied file'
