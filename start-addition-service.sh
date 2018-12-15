@@ -14,6 +14,7 @@ pwd
 ls
 
 echo 'Starting Spring Boot app'
+unlink /etc/init.d/helloWord
 sudo ln -s /home/ec2-user/apps/hello-word/hello-word-jar-type-1.0.0.jar /etc/init.d/helloWord
 chmod 755 hello-word-jar-type-1.0.0.jar
 sudo service helloWord start
