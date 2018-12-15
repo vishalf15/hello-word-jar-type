@@ -22,5 +22,5 @@ pwd
 ls
 
 echo 'Starting Spring Boot app'
-sudo ln -s /path/to/hello-word-jar-type-1.0.0.jar /etc/init.d/hello-word-jar-type
+sudo ln -s hello-word-jar-type-1.0.0.jar /etc/init.d/hello-word-jar-type
 sudo service hello-word-jar-type start
