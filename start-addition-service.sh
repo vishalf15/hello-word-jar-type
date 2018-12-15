@@ -17,6 +17,7 @@ cd target
 mv hello-word-jar-type-1.0.0.jar ../
 
 echo 'List of files'
+cd ..
 pwd
 ls
 
